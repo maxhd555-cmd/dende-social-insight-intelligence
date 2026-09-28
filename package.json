@@ -1,10 +1,10 @@
 {
-  "name": "signaldesk-social-intelligence",
-  "version": "3.0.0",
+  "name": "dende-social-insight-intelligence",
+  "version": "4.0.0",
   "private": true,
   "type": "module",
   "scripts": {
     "start": "node server.js",
-    "check": "node --check app.js && node --check server.js"
+    "check": "node --check app-v6.js && node --check app.js && node --check server.js"
   }
 }

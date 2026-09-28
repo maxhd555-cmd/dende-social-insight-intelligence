@@ -18,33 +18,16 @@ http.createServer((req, res) => {
   const raw = req.url.split('?')[0];
   const rel = decodeURIComponent(raw === '/' ? '/index.html' : raw);
   const file = path.join(root, rel);
-
-  if (!file.startsWith(root)) {
-    res.writeHead(403);
-    res.end('Forbidden');
-    return;
-  }
-
+  if (!file.startsWith(root)) { res.writeHead(403); res.end('Forbidden'); return; }
   fs.readFile(file, (err, data) => {
     if (err) {
       fs.readFile(path.join(root, 'index.html'), (fallbackErr, fallback) => {
-        if (fallbackErr) {
-          res.writeHead(404);
-          res.end('Not found');
-          return;
-        }
-        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
-        res.end(fallback);
+        if (fallbackErr) { res.writeHead(404); res.end('Not found'); return; }
+        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' }); res.end(fallback);
       });
       return;
     }
-
-    res.writeHead(200, {
-      'Content-Type': types[path.extname(file)] || 'application/octet-stream',
-      'Cache-Control': 'no-cache'
-    });
+    res.writeHead(200, { 'Content-Type': types[path.extname(file)] || 'application/octet-stream', 'Cache-Control': 'no-cache' });
     res.end(data);
   });
-}).listen(4173, '127.0.0.1', () => {
-  console.log('SignalDesk http://127.0.0.1:4173');
-});
+}).listen(4173, '127.0.0.1', () => console.log('Dende Social Insight Intelligence http://127.0.0.1:4173'));
