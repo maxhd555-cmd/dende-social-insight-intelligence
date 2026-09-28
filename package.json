@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "node server.js",
-    "check": "node --check app-v6.js && node --check app.js && node --check server.js"
+    "build": "node build.mjs",
+    "check": "node --check app-v6.js && node --check app.js && node --check server.js && node --check build.mjs"
   }
 }
