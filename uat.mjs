@@ -9,8 +9,8 @@ const required=['routeSamples','dashProfiles','applyDashboardState','data-uat-ta
 const failures=[];
 for(const route of routes)if(!app.includes(route))failures.push(`route missing: ${route}`);
 for(const token of required)if(!(app+theme).includes(token))failures.push(`UAT behavior missing: ${token}`);
-if(!index.includes('theme-blue-yellow.css?v=3'))failures.push('theme cache-bust v3 missing');
-if(!index.includes('app-v6.js?v=15'))failures.push('app cache-bust v15 missing');
-if(!sw.includes('dende-social-insight-v21-font-filters'))failures.push('service-worker font/filter cache missing');
+if(!index.includes('theme-blue-yellow.css?v=4'))failures.push('theme cache-bust v4 missing');
+if(!index.includes('app-v6.js?v=16'))failures.push('app cache-bust v16 missing');
+if(!sw.includes('dende-social-insight-v22-font-data'))failures.push('service-worker font/data cache missing');
 if(failures.length){console.error(`UAT STATIC FAIL (${failures.length})`);for(const failure of failures)console.error(`- ${failure}`);process.exit(1)}
 console.log(`UAT STATIC PASS · ${routes.length}/${routes.length} routes · demo data/action hooks present · cache versions aligned`);
