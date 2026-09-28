@@ -6,7 +6,9 @@ const outDir = resolve(root, 'dist');
 const files = [
   'index.html',
   'styles.css',
+  'styles-v6.css',
   'dashboard-original.css',
+  'theme-blue-yellow.css',
   'app-v6.js',
   'manifest.webmanifest',
   'icon.svg',
