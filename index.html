@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f6f7f8" />
+  <meta name="description" content="SignalDesk — modern evidence-first social intelligence workspace" />
+  <meta name="color-scheme" content="light" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=4" />
+  <title>SignalDesk — Social Intelligence</title>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">ข้ามไปยังเนื้อหา</a>
+  <div class="app-shell">
+    <header class="topbar" aria-label="แถบเครื่องมือหลัก">
+      <div class="brand-zone">
+        <button class="icon-button mobile-menu-btn" id="menuToggle" type="button" aria-label="เปิดเมนู" aria-expanded="false">
+          <span class="menu-lines" aria-hidden="true"><i></i><i></i><i></i></span>
+        </button>
+        <a class="brand" href="#dashboard" data-route="dashboard" aria-label="SignalDesk dashboard">
+          <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="brand-copy"><strong>SignalDesk</strong><small>Social intelligence</small></span>
+        </a>
+      </div>
+
+      <button class="command-trigger" id="commandTrigger" type="button" aria-haspopup="dialog" aria-controls="commandPalette">
+        <span class="command-search-icon" aria-hidden="true"></span>
+        <span>ค้นหา evidence, post, keyword หรือเปิด module…</span>
+        <kbd>Ctrl K</kbd>
+      </button>
+
+      <div class="topbar-actions">
+        <div class="live-status" aria-label="สถานะระบบ"><span></span><b>Live</b><small>2m ago</small></div>
+        <button class="icon-text-btn" id="notificationBtn" type="button" aria-haspopup="true" aria-controls="alertDrawer">
+          <span class="notification-dot" aria-hidden="true"></span><span>Alerts</span><b>3</b>
+        </button>
+        <button class="avatar-btn" id="profileBtn" type="button" aria-label="โปรไฟล์ผู้ใช้">AD</button>
+      </div>
+    </header>
+
+    <aside class="sidebar" id="sidebar" aria-label="เมนูหลัก">
+      <div class="workspace-switcher">
+        <span class="workspace-avatar">AC</span>
+        <span><strong>Atlas Commerce</strong><small>Production workspace</small></span>
+        <button class="workspace-more" type="button" aria-label="ตัวเลือก workspace">•••</button>
+      </div>
+      <nav id="sidebarNav"></nav>
+      <div class="sidebar-foot">
+        <div class="health-line"><span class="status-dot"></span><span>Collectors healthy</span><strong>12/12</strong></div>
+        <small>Local demo · synthetic data</small>
+      </div>
+    </aside>
+    <div class="sidebar-backdrop" id="sidebarBackdrop" aria-hidden="true"></div>
+
+    <main id="main-content" class="main" tabindex="-1">
+      <div id="app" aria-live="polite"></div>
+    </main>
+  </div>
+
+  <aside class="drawer" id="alertDrawer" aria-hidden="true" aria-label="Alerts">
+    <div class="drawer-head">
+      <div><h2>Alerts</h2><p>สัญญาณที่ควรตรวจสอบก่อน</p></div>
+      <button class="icon-close" data-close-drawer type="button" aria-label="ปิด Alerts"></button>
+    </div>
+    <div class="drawer-summary"><strong>3 signals</strong><span>1 high · 2 medium</span></div>
+    <div class="alert-list" id="alertList"></div>
+  </aside>
+  <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+  <div class="command-root" id="commandPalette" aria-hidden="true"></div>
+  <div class="modal-root" id="modalRoot" aria-hidden="true"></div>
+  <div class="toast-stack" id="toastStack" aria-live="polite" aria-atomic="true"></div>
+  <template id="loadingTemplate"><div class="loading-bar" aria-hidden="true"></div></template>
+
+  <script src="app.js?v=4"></script>
+</body>
+</html>

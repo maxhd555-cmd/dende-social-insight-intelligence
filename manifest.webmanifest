@@ -1,0 +1,18 @@
+{
+  "name": "SignalDesk Social Intelligence",
+  "short_name": "SignalDesk",
+  "id": "./",
+  "description": "Evidence-first social intelligence operations workspace",
+  "start_url": "./#dashboard",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f6f7f8",
+  "categories": ["business", "productivity"],
+  "icons": [{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}],
+  "shortcuts": [
+    {"name":"Dashboard","url":"./#dashboard"},
+    {"name":"Deep Search","url":"./#search"},
+    {"name":"Reports","url":"./#reports"}
+  ]
+}

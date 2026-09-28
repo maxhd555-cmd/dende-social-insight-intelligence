@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-28T12:48:00+07:00",
+  "title": "Design System: SignalDesk Social Intelligence",
+  "extensions": {
+    "colorMeta": {
+      "ink": {"role":"primary","displayName":"Command Ink","canonical":"#171b21","tonalRamp":["#111418","#171b21","#252a32","#3c424c","#5f6670","#747b85","#c9cdd1","#f6f7f8"]},
+      "coral": {"role":"secondary","displayName":"Coral Signal","canonical":"#b8380f","tonalRamp":["#381107","#63210b","#8d2c0d","#b8380f","#d87552","#e8a890","#f6d8cc","#fff1eb"]},
+      "forest": {"role":"secondary","displayName":"Forest Evidence","canonical":"#123b25","tonalRamp":["#081b11","#0d2a1a","#123b25","#2e6446","#5e8d70","#9fbda8","#dceadf","#f3f8f4"]},
+      "cream": {"role":"tertiary","displayName":"Cream Context","canonical":"#f3e8d6","tonalRamp":["#3c3429","#665744","#8e7a60","#b8a68c","#d4c5ae","#e6d9c5","#f3e8d6","#fbf7ef"]},
+      "mint": {"role":"tertiary","displayName":"Mint Analysis","canonical":"#a9d8c5","tonalRamp":["#183a2c","#2a5b48","#477c65","#6da48b","#8fc3ab","#a9d8c5","#d5ebe2","#f2faf7"]},
+      "shell": {"role":"neutral","displayName":"Cool Shell","canonical":"#f6f7f8","tonalRamp":["#171b21","#252a32","#3c424c","#5f6670","#747b85","#c9cdd1","#e5e7e8","#f6f7f8"]}
+    },
+    "typographyMeta": {
+      "display": {"displayName":"Display","purpose":"Page-level command-desk headings using restrained regular weight."},
+      "headline": {"displayName":"Signal Headline","purpose":"Narrative intelligence statements on signature surfaces."},
+      "title": {"displayName":"Section Title","purpose":"Charts, sections, and operational group headings."},
+      "body": {"displayName":"Operational Body","purpose":"Thai/English explanatory content and evidence context."},
+      "label": {"displayName":"Operational Label","purpose":"Filters, metadata, badges, table headings, and dense utility text."}
+    },
+    "shadows": [
+      {"name":"floating-layer","value":"0 18px 48px rgba(23,27,33,.14), 0 2px 8px rgba(23,27,33,.08)","purpose":"Detached modal, command palette, and toast layers only."}
+    ],
+    "motion": [
+      {"name":"state-fast","value":"140–160ms ease","purpose":"Hover, active, and compact utility state changes."},
+      {"name":"layer-enter","value":"220ms cubic-bezier(.22,1,.36,1)","purpose":"Drawer and off-canvas navigation movement."},
+      {"name":"loading-once","value":"650ms ease-out 1","purpose":"One-shot loading sweep; never an infinite decorative marquee."}
+    ],
+    "breakpoints": [
+      {"name":"wide-collapse","value":"1240px"},
+      {"name":"navigation-sheet","value":"920px"},
+      {"name":"mobile","value":"640px"}
+    ]
+  },
+  "components": [
+    {
+      "name":"Primary Button",
+      "kind":"button",
+      "refersTo":"button-primary",
+      "description":"Near-black primary action with restrained geometry.",
+      "html":"<button class=\"ds-btn-primary\">EXPLORE EVIDENCE</button>",
+      "css":".ds-btn-primary{min-height:42px;border:0;border-radius:10px;background:#171b21;color:#fff;padding:9px 15px;font:500 11px/1.4 'IBM Plex Sans Thai','IBM Plex Sans',sans-serif;transition:background-color .15s ease,transform .12s ease}.ds-btn-primary:hover{background:#0f1216}.ds-btn-primary:active{transform:scale(.985)}.ds-btn-primary:focus-visible{outline:3px solid rgba(47,126,230,.28);outline-offset:2px}"
+    },
+    {
+      "name":"Secondary Button",
+      "kind":"button",
+      "refersTo":"button-secondary",
+      "description":"White hairline action for supporting operations.",
+      "html":"<button class=\"ds-btn-secondary\">EXPORT SNAPSHOT</button>",
+      "css":".ds-btn-secondary{min-height:42px;border:1px solid #e5e7e8;border-radius:10px;background:#fff;color:#171b21;padding:9px 15px;font:500 11px/1.4 'IBM Plex Sans Thai','IBM Plex Sans',sans-serif;transition:background-color .15s ease,border-color .15s ease,transform .12s ease}.ds-btn-secondary:hover{background:#f8f9fa;border-color:#c9cdd1}.ds-btn-secondary:active{transform:scale(.985)}.ds-btn-secondary:focus-visible{outline:3px solid rgba(47,126,230,.28);outline-offset:2px}"
+    },
+    {
+      "name":"Filter Input",
+      "kind":"input",
+      "refersTo":"input",
+      "description":"Compact white operational field with a cool hairline.",
+      "html":"<input class=\"ds-input\" value=\"Project: ทั้งหมด\" aria-label=\"Project\">",
+      "css":".ds-input{height:38px;border:1px solid #e5e7e8;border-radius:8px;background:#fff;color:#3c424c;padding:0 11px;font:400 11px/1.4 'IBM Plex Sans Thai','IBM Plex Sans',sans-serif}.ds-input:hover{border-color:#c9cdd1}.ds-input:focus{border-color:#2f7ee6;outline:3px solid rgba(47,126,230,.28);outline-offset:2px}"
+    },
+    {
+      "name":"Active Navigation",
+      "kind":"nav",
+      "description":"Solid Command Ink active navigation state with one-stroke SVG icon language.",
+      "html":"<a class=\"ds-nav-active\" href=\"#dashboard\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M3 10.5 12 3l9 7.5M5 9.5V21h14V9.5M9 21v-7h6v7\"/></svg><span>Dashboard</span></a>",
+      "css":".ds-nav-active{min-height:38px;display:flex;align-items:center;gap:9px;padding:7px 9px;border-radius:8px;background:#171b21;color:#fff;text-decoration:none;font:400 11px/1.4 'IBM Plex Sans Thai','IBM Plex Sans',sans-serif}.ds-nav-active svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.ds-nav-active:focus-visible{outline:3px solid rgba(47,126,230,.28);outline-offset:2px}"
+    },
+    {
+      "name":"Sentiment Chip",
+      "kind":"chip",
+      "description":"Compact semantic status pill used only for sentiment/status metadata.",
+      "html":"<span class=\"ds-chip-positive\">Positive</span>",
+      "css":".ds-chip-positive{display:inline-flex;align-items:center;gap:5px;border-radius:999px;padding:4px 7px;background:#f8f9fa;color:#3c424c;font:500 11px/1.4 'IBM Plex Sans Thai','IBM Plex Sans',sans-serif}.ds-chip-positive:before{content:'';width:5px;height:5px;border-radius:50%;background:#287a43}"
+    },
+    {
+      "name":"Evidence Signal Surface",
+      "kind":"custom",
+      "refersTo":"signature-surface",
+      "description":"High-salience analytical block that turns one movement into a narrative and evidence path.",
+      "html":"<article class=\"ds-signal\"><span>SIGNAL TO INVESTIGATE</span><h2>Delivery complaints are moving faster than conversation volume.</h2><strong>+38%</strong><button>INSPECT EVIDENCE →</button></article>",
+      "css":".ds-signal{border-radius:12px;background:#b8380f;color:#fff;padding:26px;font-family:'IBM Plex Sans Thai','IBM Plex Sans',sans-serif}.ds-signal>span{font-size:11px;letter-spacing:.07em}.ds-signal h2{font-size:28px;line-height:1.13;font-weight:400;letter-spacing:-.035em}.ds-signal strong{display:block;font-size:58px;line-height:.95;font-weight:400;letter-spacing:-.05em}.ds-signal button{margin-top:20px;min-height:42px;border:0;border-radius:10px;background:#fff;color:#171b21;padding:9px 15px;font-weight:500}.ds-signal button:focus-visible{outline:3px solid rgba(255,255,255,.55);outline-offset:2px}"
+    }
+  ],
+  "narrative": {
+    "northStar":"The Intelligence Command Desk",
+    "overview":"SignalDesk is a dense operating workspace that behaves like an editorial command desk rather than a wall of equal SaaS cards. The hierarchy answers what changed, why it matters, which evidence proves it, and what action follows. White work surfaces and cool paper-gray chrome keep recurring monitoring calm; selective full-surface coral, forest, cream, and mint moments give high-value signals a recognizable authored character.",
+    "keyCharacteristics":["Evidence-first hierarchy","Editorial asymmetry","Calm density","Signature color as structure","Bilingual-ready UI"],
+    "rules":[
+      {"name":"The Signal Surface Rule","body":"Signature colors earn attention by occupying meaningful surfaces; do not sprinkle them across icons, borders, and labels on the same screen.","section":"colors"},
+      {"name":"The Near-Black Action Rule","body":"Primary actions use Command Ink. Color surfaces may invert to a white action, but the interface does not invent a second bright CTA color.","section":"colors"},
+      {"name":"The Weight Restraint Rule","body":"Use 400 for display/body and 500 for emphasis. Reserve 600 for compact labels or exceptional navigation utility; do not use 700 as a hierarchy shortcut.","section":"typography"},
+      {"name":"The Reduce-Columns Rule","body":"Responsive behavior removes columns and navigation density; it never shrinks text or cards merely to preserve a desktop grid.","section":"layout"},
+      {"name":"The Flat-By-Default Rule","body":"Resting content surfaces do not get decorative drop shadows. If a surface is part of the page flow, separate it with space, tone, or a hairline.","section":"elevation"}
+    ],
+    "dos":["Do keep insight, evidence, and next action visually adjacent.","Do use white space and hairlines before inventing another card container.","Do reserve full-surface Coral/Forest/Cream/Mint for meaningful analytical moments.","Do keep functional text at 11px or larger and body copy at 14px with readable contrast."],
+    "donts":["Don't introduce gradients, glassmorphism, neon glow, 3D decoration, or shadow-heavy card walls.","Don't use signature colors simultaneously as CTA, icon, border, and background decoration.","Don't use emoji or text glyphs as interface icons where the SVG icon system already exists.","Don't use bold display weights to create hierarchy that spacing, position, and scale should provide."]
+  }
+}
